@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:context=".MainActivity"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:id="@+id/button"
+                    android:layout_weight="0.4"
+                    android:textColor="#fafafa"
+                    android:background="#3c8dbc" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAPS"
+                    android:id="@+id/button2"
+                    android:layout_weight="0.4"
+                    android:textColor="#fafafa"
+                    android:background="#3c8dbc" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="History"
+                    android:id="@+id/button3"
+                    android:layout_weight="0.4"
+                    android:textColor="#fafafa"
+                    android:background="#5987a1" />
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".PostActivity" >
+
+                <EditText
+                    android:id="@+id/post_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+
+                <EditText
+                    android:id="@+id/input_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.02"
+                    android:hint="@string/ui_text_hint_input"
+                    android:ems="10"
+                    android:inputType="text" >
+                </EditText>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_margin="5dp"
+                android:gravity="bottom|center"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="40dp"
+                    android:onClick="onPostClicked"
+                    android:text="READ"
+                    android:background="#5987a1"
+                    android:layout_weight="0.22">
+                </Button>
+                <Button
+                    android:id="@+id/btnRefreshdd"
+                    android:layout_width="18dp"
+                    android:layout_height="75dp"
+                    android:layout_marginRight="40dp"
+                    android:onClick="onRefreshClicked"
+                    android:text="@string/ui_button_refresh_title"
+                    android:visibility="invisible">
+                </Button>
+                <Button
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginRight="40dp"
+                    android:onClick="onRefreshClicked"
+                    android:background="#5987a1"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="0.22"
+                    android:text="DEELETE">
+                </Button>
+            </LinearLayout>
+
+        </LinearLayout></ScrollView>
+</android.support.design.widget.CoordinatorLayout>
